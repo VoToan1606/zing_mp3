@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://vikdang.github.io/Code_web_music_player/assets/img/favicon/icon_zing_mp3.png">
+    <title>Zing mp3</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/grid.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+  </head>
+  <body>
+    <div class="app">
+        <!-- nav-bar -->
+          <div class="nav-bar">
+              <div class="nav-bar__header mobile-none ">
+                <a href="#" class="nav-bar__logo">
+                  <img
+                    class="nav-bar__header-img"
+                    src="https://vikdang.github.io/Code_web_music_player/assets/img/logos/main-logo.svg"
+                    alt=""
+                  />
+                  <img class="nav-bar__header-img-tablet d-none" src="https://vikdang.github.io/Code_web_music_player/assets/img/logos/small-logo.svg" alt="">
+                </a>
+              </div>
+              <ul class="nav-bar__list">
+                <li data-nav ="select" class="nav-bar__item active">
+                  <a class="nav-bar__link" href="">
+                    <i class="bi bi-music-player"></i>
+                    <span>Cá Nhân</span>
+                  </a>
+                </li>
+                <li data-nav ="select" class="nav-bar__item">
+                  <a class="nav-bar__link" href="">
+                    <i class="bi bi-vinyl"></i>
+                    <span>Khám Phá</span>
+                  </a>
+                </li>
+                <li data-nav ="select" class="nav-bar__item">
+                  <a class="nav-bar__link" href="">
+                    <i class="bi bi-music-note-list"></i>
+                    <span>zingchart</span>
+                  </a>
+                </li>
+                <li class="nav-bar__item">
+                  <a class="nav-bar__link" href="">
+                    <i class="bi bi-soundwave"></i>
+                    <span>Radio</span>
+                  </a>
+                </li>
+                <li class="nav-bar__item">
+                  <a class="nav-bar__link" href="">
+                    <i class="bi bi-file-earmark-slides"></i>
+                    <span>Theo Dõi</span>
+                  </a>
+                </li>
+                <li class="nav-bar__item mobile-none">
+                  <a class="nav-bar__link" href="">
+                    <i class="bi bi-music-note-beamed"></i>
+                    <span>Nhạc Mới</span>
+                  </a>
+                </li>
+                <li class="nav-bar__item mobile-none">
+                  <a class="nav-bar__link" href="">
+                    <i class="bi bi-slack"></i>
+                    <span>Thể Loại</span>
+                  </a>
+                </li>
+                <li class="nav-bar__item mobile-none">
+                  <a class="nav-bar__link" href="">
+                    <i class="bi bi-star"></i>
+                    <span>Top 100</span>
+                  </a>
+                </li>
+                <li class="nav-bar__item mobile-none">
+                  <a class="nav-bar__link" href="">
+                    <i class="bi bi-camera-video"></i>
+                    <span>MV</span>
+                  </a>
+                </li>
+              </ul>
+          </div>
+         <!-- header -->
+          <div class="container__head">
+            <div class="search">
+              <span class="search__icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+              <input
+                type="text"
+                class="search__input"
+                placeholder="Nhập tên bài hát, nghệ sĩ hoặc mv..."
+              />
+            </div>
+            <div class="info">
+              <img
+                src="https://kenh14cdn.com/thumb_w/660/2020/7/17/brvn-15950048783381206275371.jpg"
+                alt=""
+                class="info-img"
+              />
+            </div>
+          </div>
+           <!-- ca nhan -->
+          <div data-id="body-select" class="container d-none active">
+              
+              <div class="container__banner">
+                <div class="container__banner-info">
+                  <img
+                    src="https://kenh14cdn.com/thumb_w/660/2020/7/17/brvn-15950048783381206275371.jpg"
+                    alt=""
+                    class="container__banner-img"
+                  />
+                </div>
+                <h3 class="container__heading">Võ Toàn</h3>
+                <div class="vip mobile-none">
+                  <span class="vip__inter">MUA VIP NGAY</span>
+                  <span class="vip__code ">NHẬP CODE VIP</span>
+                  <span class="vip__more"
+                    ><i class="fa-solid fa-ellipsis"></i
+                  ></span>
+                </div>
+              </div>
+              <div class="container__body">
+                <div class="container__body-selection-bar ">
+                  <ul class="selection-bar__list">
+                    <li class="selection-bar__item active">TỔNG QUAN</li>
+                    <li class="selection-bar__item">BÀI HÁT</li>
+                    <li class="selection-bar__item">PLAYLIST</li>
+                    <li class="selection-bar__item mobile-none">ALBUM</li>
+                    <li class="selection-bar__item">MV</li>
+                    <li class="selection-bar__item mobile-none">NGHỆ SỸ</li>
+                    <li class="selection-bar__item">TẢI LÊN</li>
+                  </ul>
+                </div>
+                <div class="container__body-main">
+                  <div class="grid">
+                    <div class="container__body-show">
+                      <h2 class="text-head">
+                        Bài hát
+                        <i class="fa-sharp fa-solid fa-chevron-right mobile-none"></i>
+                      </h2>
+                      <div class="play-list-head">
+                        <span class="play-list-head__dow mobile-none">
+                          <i class="fa-solid fa-upload"></i>Tải lên
+                        </span>
+                        <span class="play-list-head__play">
+                          <i class="fa-solid fa-play"></i>Phát tất cả
+                        </span>
+                      </div>
+                    </div>
+                    <div class="row mb-20">
+                      <div class="col l-3 m-5 mobile-none">  
+                        <div class="slide">
+                          <img
+                            class="slide__img"
+                            src="https://vikdang.github.io/Code_web_music_player/assets/img/slides/slide8.jpg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="col l-9 m-7 c-12">
+                        <ul class="play-list">
+                          
+                        </ul>
+                      </div>
+                    </div>
+                    <h2 class="text-head">
+                      Album
+                      <i class="fa-sharp fa-solid fa-chevron-right mobile-none"></i>
+                    </h2>
+                    <div class="row mb-20">
+                      <div class="col l-2-4 m-3 c-6">
+                        <div class="album">
+                          <div class="album-wrap-image">
+                            <img src="https://vikdang.github.io/Code_web_music_player/assets/img/albums/album1.jpg" alt="" class="album-img">
+                          </div>
+                          <span class="album-name">Golden Hour</span>
+                        </div>
+                      </div>
+                      <div class="col l-2-4 m-3 c-6">
+                        <div class="album">
+                          <div class="album-wrap-image">
+                            <img src="https://vikdang.github.io/Code_web_music_player/assets/img/albums/album2.jpg" alt="" class="album-img">
+                          </div>
+                          <span class="album-name">Boycold (Mini album)</span>
+                        </div>
+                      </div>
+                      <div class="col l-2-4 m-3 mobile-none">
+                        <div class="album">
+                          <div class="album-wrap-image">
+                            <img src="https://vikdang.github.io/Code_web_music_player/assets/img/albums/album3.jpg" alt="" class="album-img">
+                          </div>
+                          <span class="album-name">Red</span>
+                        </div>
+                      </div>
+                      <div class="col l-2-4 m-3 c-6">
+                        <div class="album">
+                          <div class="album-wrap-image">
+                            <img src="https://vikdang.github.io/Code_web_music_player/assets/img/albums/album4.jpg" alt="" class="album-img">
+                          </div>
+                          <span class="album-name">Người yêu cũ(Gửi cho anh 2)</span>
+                        </div>
+                      </div>
+                      <div class="col l-2-4 tablet-none">
+                        <div class="album">
+                          <div class="album-wrap-image">
+                            <img src="https://vikdang.github.io/Code_web_music_player/assets/img/albums/album5.jpg" alt="" class="album-img">
+                          </div>
+                          <span class="album-name">Querencia (Mini Album)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <h2 class="text-head">
+                      Nghệ sỹ
+                      <i class="fa-sharp fa-solid fa-chevron-right mobile-none"></i>
+                    </h2>
+                    <div class="row">
+                      <div class="col l-2-4 m-3 c-6">
+                        <div class="artist">
+                          <div class="artist-wrap-image">
+                            <img src="https://vikdang.github.io/Code_web_music_player/assets/img/artists/artist1.jpg" alt="" class="artist-img">
+                          </div>
+                          <div class="artist__info">
+                            <span class="artist__info-name">Binz <i class="fa-solid fa-star"></i></span>
+                            <span class="artist__info-follow">265K quan tâm</span>
+                            <span class="artist-care">
+                              <i class="fa-solid fa-check"></i>
+                              Đã quan tâm
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col l-2-4 m-3 c-6">
+                        <div class="artist">
+                          <div class="artist-wrap-image">
+                            <img src="https://vikdang.github.io/Code_web_music_player/assets/img/artists/artist2.jpg" alt="" class="artist-img">
+                          </div>
+                          <div class="artist__info">
+                            <span class="artist__info-name">Phương ly <i class="fa-solid fa-star"></i></span>
+                            <span class="artist__info-follow">300K quan tâm</span>
+                            <span class="artist-care">
+                              <i class="fa-solid fa-check"></i>
+                              Đã quan tâm
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col l-2-4 m-3 c-6">
+                        <div class="artist">
+                          <div class="artist-wrap-image">
+                            <img src="https://vikdang.github.io/Code_web_music_player/assets/img/artists/artist3.jpg" alt="" class="artist-img">
+                          </div>
+                          <div class="artist__info">
+                            <span class="artist__info-name">Amee <i class="fa-solid fa-star"></i></span>
+                            <span class="artist__info-follow">317K quan tâm</span>
+                            <span class="artist-care">
+                              <i class="fa-solid fa-check"></i>
+                              Đã quan tâm
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col l-2-4 m-3 c-6">
+                        <div class="artist">
+                          <div class="artist-wrap-image">
+                            <img src="https://vikdang.github.io/Code_web_music_player/assets/img/artists/artist4.jpg" alt="" class="artist-img">
+                          </div>
+                          <div class="artist__info">
+                            <span class="artist__info-name">MCK <i class="fa-solid fa-star"></i></span>
+                            <span class="artist__info-follow">65K quan tâm</span>
+                            <span class="artist-care">
+                              <i class="fa-solid fa-check"></i>
+                              Đã quan tâm
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col l-2-4 m-3 tablet-none">
+                        <div class="artist">
+                          <div class="artist-wrap-image">
+                            <img src="https://vikdang.github.io/Code_web_music_player/assets/img/artists/artist5.jpg" alt="" class="artist-img">
+                          </div>
+                          <div class="artist__info">
+                            <span class="artist__info-name">Sơn Tùng <i class="fa-solid fa-star"></i></span>
+                            <span class="artist__info-follow">2.1M quan tâm</span>
+                            <span class="artist-care">
+                              <i class="fa-solid fa-check"></i>
+                              Đã quan tâm
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <!-- kham pha -->
+         <div data-id="body-select" class="discover d-none">
+          <div class="discover__slider">
+            <div class="grid wide">
+              <div class="row">
+                <div class="col l-4 m-4 c-6">
+                  <div class="discover__slider-item">
+                    <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/slides/slide1.jpg" alt="" class="discover__slider-img">
+                  </div>
+                </div>
+                <div class="col l-4 m-4 c-6">
+                  <div class="discover__slider-item">
+                    <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/slides/slide2.jpg" alt="" class="discover__slider-img">
+                  </div>
+                </div>
+                <div class="col l-4 m-4 mobile-none">
+                  <div class="discover__slider-item">
+                    <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/slides/slide8.jpg" alt="" class="discover__slider-img">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="discover__body">
+            
+            <div class="grid wide">
+              <h3 class="discover__body-head">Có thể bạn muốn nghe</h3>
+              <div class="row mb-20">
+                <div class="col l-2-4 m-3 c-6">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList1/playlist1.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">Mở Đầu Hoàn Hảo</span>
+                    <span class="discover__body-item-description">AMEE, ERIK, Hoàng Duyên</span>
+                  </div>
+                </div>
+                <div class="col l-2-4 m-3 c-6">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList1/playlist2.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">V-Pop: The A-List</span>
+                    <span class="discover__body-item-description">Bích Phương, Hoàng Thùy Linh, ERIK</span>
+                  </div>
+                </div>
+                <div class="col l-2-4 m-3 c-6">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList1/playlist3.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">Tỏ Tình Nhẹ Nhàng Thôi</span>
+                    <span class="discover__body-item-description">Quân A.P, Changg, Hoàng Duyên</span>
+                  </div>
+                </div>
+                <div class="col l-2-4 m-3 c-6">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList1/playlist4.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">Nhạc Trẻ Gây Nghiện</span>
+                    <span class="discover__body-item-description">AMEE, Quân A.P, ERIK</span>
+                  </div>
+                </div>
+                <div class="col l-2-4 tablet-none">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList1/playlist5.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">HIT-MAKER: Nổi Bật</span>
+                    <span class="discover__body-item-description">LyLy, RIN9, Vương Anh Tú</span>
+                  </div>
+                </div>
+              </div>
+              <h3 class="discover__body-head">Lựa chọn hôm nay</h3>
+              <div class="row">
+                <div class="col l-2-4 m-3 c-12">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList2/playlist1.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">Đóa Hồng Nhạc Việt</span>
+                    <span class="discover__body-item-description">Những đóa hồng tạo nên dấu ấn trên thị trường âm nhạc Việt hiện nay</span>
+                  </div>
+                </div>
+                <div class="col l-2-4 m-3 c-12">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList2/playlist2.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">V-Pop Rising</span>
+                    <span class="discover__body-item-description">Những tài năng Gen Z của V-Pop đáng nghe nhất hôm nay</span>
+                  </div>
+                </div>
+                <div class="col l-2-4 m-3 c-12">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList2/playlist3.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">Everyday EDM</span>
+                    <span class="discover__body-item-description">Khởi động mỗi ngày với những ca khúc EDM sôi động</span>
+                  </div>
+                </div>
+                <div class="col l-2-4 m-3 c-12">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList2/playlist4.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">K-Pop Newbie</span>
+                    <span class="discover__body-item-description">Những hạt giống tiềm năng của K-Pop thế hệ mới</span>
+                  </div>
+                </div>
+                <div class="col l-2-4 m-3 tablet-none">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList2/playlist5.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">Anime Now</span>
+                    <span class="discover__body-item-description">Nhạc Anime hot nhất ở thời điểm hiện tại có ngay tại đây</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+         <!-- zingchart -->
+         <div data-id="body-select" class="zing-chart d-none">
+          <div class="discover__body">
+            
+            <div class="grid wide">
+              <h3 class="discover__body-head">Có thể bạn muốn nghe</h3>
+              <div class="row mb-20">
+                <div class="col l-2-4 m-3 c-6">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList1/playlist1.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">Mở Đầu Hoàn Hảo</span>
+                    <span class="discover__body-item-description">AMEE, ERIK, Hoàng Duyên</span>
+                  </div>
+                </div>
+                <div class="col l-2-4 m-3 c-6">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList1/playlist2.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">V-Pop: The A-List</span>
+                    <span class="discover__body-item-description">Bích Phương, Hoàng Thùy Linh, ERIK</span>
+                  </div>
+                </div>
+                <div class="col l-2-4 m-3 c-6">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList1/playlist3.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">Tỏ Tình Nhẹ Nhàng Thôi</span>
+                    <span class="discover__body-item-description">Quân A.P, Changg, Hoàng Duyên</span>
+                  </div>
+                </div>
+                <div class="col l-2-4 m-3 c-6">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList1/playlist4.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">Nhạc Trẻ Gây Nghiện</span>
+                    <span class="discover__body-item-description">AMEE, Quân A.P, ERIK</span>
+                  </div>
+                </div>
+                <div class="col l-2-4 tablet-none">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList1/playlist5.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">HIT-MAKER: Nổi Bật</span>
+                    <span class="discover__body-item-description">LyLy, RIN9, Vương Anh Tú</span>
+                  </div>
+                </div>
+              </div>
+              <h3 class="discover__body-head">Lựa chọn hôm nay</h3>
+              <div class="row">
+                <div class="col l-2-4 m-3 c-12">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList2/playlist1.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">Đóa Hồng Nhạc Việt</span>
+                    <span class="discover__body-item-description">Những đóa hồng tạo nên dấu ấn trên thị trường âm nhạc Việt hiện nay</span>
+                  </div>
+                </div>
+                <div class="col l-2-4 m-3 c-12">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList2/playlist2.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">V-Pop Rising</span>
+                    <span class="discover__body-item-description">Những tài năng Gen Z của V-Pop đáng nghe nhất hôm nay</span>
+                  </div>
+                </div>
+                <div class="col l-2-4 m-3 c-12">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList2/playlist3.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">Everyday EDM</span>
+                    <span class="discover__body-item-description">Khởi động mỗi ngày với những ca khúc EDM sôi động</span>
+                  </div>
+                </div>
+                <div class="col l-2-4 m-3 c-12">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList2/playlist4.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">K-Pop Newbie</span>
+                    <span class="discover__body-item-description">Những hạt giống tiềm năng của K-Pop thế hệ mới</span>
+                  </div>
+                </div>
+                <div class="col l-2-4 tablet-none">
+                  <div class="discover__body-item">
+                    <div class="discover__body-item-wrap">
+                      <img src="https://vikdang.github.io/Code_web_music_player/assets/img/tabExplore/normalPlaylists/playlistList2/playlist5.jpg" alt="" class="discover__body-item-img">
+                    </div>
+                    <span class="discover__body-item-name">Anime Now</span>
+                    <span class="discover__body-item-description">Nhạc Anime hot nhất ở thời điểm hiện tại có ngay tại đây</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+         <!-- player -->
+          <div class="player">
+            <div class="player__info">
+              <img
+                src="https://vikdang.github.io/Code_web_music_player/assets/img/music/listSong4/song1.jpg"
+                alt=""
+                class="player__info-img"
+              />
+              <div class="play-list__item-wrapper">
+                <h3 class="play-list__item-info-name">Buông Hàng</h3>
+                <span class="play-list__item-info-author">Young milo</span>
+            </div>
+            <span class="player__info-heart tablet-none"><i class="fa-solid fa-heart"></i></span>
+            <span class="player__info-dot tablet-none"><i class="fa-solid fa-ellipsis"></i></span>
+          </div>
+          <div class="player__play">
+            <div class="player__play-icon">
+              <span class="player__play-random mobile-none"><i class="fa-solid fa-shuffle"></i></i></span>
+              <span class="player__play-prev mobile-none"><i class="fa-solid fa-backward-step"></i></span>
+              <span class="player__play-play">
+                <i class="fa-solid fa-play play"></i>
+                <i class="fa-solid fa-pause pause"></i>
+              </span>
+              <span class="player__play-next"><i class="fa-solid fa-forward-step"></i></span>
+              <span class="player__play-repeat mobile-none"><i class="fa-solid fa-repeat"></i></span>
+            </div>
+            <input type="range" class="player__play-input mobile-none" value="0" min="0" max="100" step="1">
+            <audio id="audio" src=""></audio>
+            
+          </div>
+          <div class="player__setting mobile-none">
+            <span class="player__setting-video tablet-none"><i class="fa-solid fa-video"></i></span>
+            <span class="player__setting-micro tablet-none"><i class="fa-solid fa-microphone"></i></span>
+            <span class="player__setting-volume"><i class="fa-solid fa-volume-low"></i></span>
+            <input type="range" class="player__setting-range" value="1" min="0" max="1" step="0.1">
+          </div>
+
+        </div>
+      
+    <!-- modal -->
+    <div class="modal">
+      <div class="modal__dow">
+        <i class="bi bi-chevron-down popup__action-btn-icon"></i>
+      </div>
+      <div class="modal__body">
+        <div class="modal__body-wrap">
+          <img src="https://vikdang.github.io/Code_web_music_player/assets/img/music/listSong4/song3.jpg" alt="" class="modal__body-img">
+        </div>
+        <div class="modal__des">
+          <span class="modal__des-state">Now playing</span>
+          <h2 class="modal__des-name">Walk On Da Street</h2>
+          <span class="modal__des-singer">16Typh</span>
+        </div>
+      </div>
+    </div>
+    <template id="template">
+      <li class="play-list__item">
+        <div class="play-list__item-info">
+          <img
+            class="play-list__item-img"
+            src="https://vikdang.github.io/Code_web_music_player/assets/img/music/listSong4/song6.jpg"
+            alt=""
+          />
+          <div class="play-list__item-wrapper">
+            <h3 class="play-list__item-name">Buông Hàng</h3>
+            <span class="play-list__item-author"
+              >Young milo</span
+            >
+          </div>
+        </div>
+        <span class="play-list__item-totalTime">02:51</span>
+        <div class="play-list__item-setting">
+          <span class="play-list__item-setting-micro mobile-none"
+            ><i class="fa-solid fa-microphone"></i
+          ></span>
+          <span class="play-list__item-setting-heart mobile-none"
+            ><i class="fa-solid fa-heart"></i
+          ></span>
+          <span class="play-list__item-setting-dot"
+            ><i class="fa-solid fa-ellipsis"></i
+          ></span>
+        </div>
+      </li>
+    </template>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

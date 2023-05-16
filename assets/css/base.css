@@ -1,0 +1,74 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --container-head:70px;
+    --navbar-width:230px;
+}
+
+* {
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.w-100 {
+    width: 100%;
+
+}
+
+.flex {
+    display: flex;
+}
+
+.al-center {
+    align-items: center;
+}
+
+.ps-relative {
+    position: relative;
+}
+
+.ps-absolute {
+    position: absolute;
+}
+
+ul {
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mg {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.pd {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.active {
+    display: block;
+}
+

@@ -1,0 +1,752 @@
+html {
+    background: url('https://vikdang.github.io/Code_web_music_player/assets/img/themeBgs/listTheme1/theme1.svg')top center;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    background-color: rgb(65, 20, 101);
+    left: 0;
+    bottom: 0;
+    width: var(--navbar-width);
+}
+
+
+.nav-bar__header {
+    height: 50px;
+    padding: 10px 10px 10px 25px;
+}
+
+.nav-bar__logo {
+    
+}
+
+.nav-bar__header-img {
+    width: 60%;
+}
+
+.nav-bar__list {
+    margin-top: 20px;
+    list-style: none;
+    /* padding-left: 25px; */
+}
+
+.nav-bar__item.active{
+    background-color: #ffffff1a;
+    border-left: 3px solid #ed2b91;
+}
+
+
+.nav-bar__link {
+    padding: 10px 0 10px 25px;
+    display: block;
+    font-size: 1.6rem;
+    color: var(--white-color);
+}
+
+.nav-bar__link:hover {
+    opacity: 0.8;
+}
+
+.nav-bar__link i {
+    color: var(--white-color);
+    width: 24px;
+    height: 24px;
+    font-size: 2.2rem;
+    display: inline-block;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.container {
+    margin-left: var(--navbar-width);
+    padding-bottom: 140px;
+   
+}
+.container__head {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left:var(--navbar-width);
+    height: var(--container-head);
+    /* background-color: #37075d; */
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 1;
+}
+
+.container__body-show {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search {
+    position: relative;
+}
+
+.search__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--white-color);
+    font-size: 1.6rem;
+    left: 10px;
+    padding: 5px;
+}
+
+.search__input {
+    width: 400px;
+    background: #4b206e;
+    outline: none;
+    border: none;
+    padding: 10px 10px 10px 40px;
+    color: #ccc;
+    border-radius: 20px;
+    font-size: 1.6rem;
+}
+.search__input::placeholder {
+    color: #ccc;
+}
+
+.info {
+    padding-right: 10px;
+}
+
+.info-img {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+
+
+.container__banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top:var(--container-head);
+    padding: 20px 0;
+}   
+
+.container__banner-info {
+   
+}
+
+.container__banner-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.container__heading {
+    font-size: 3rem;
+    margin-top: 15px;
+    color: var(--white-color);
+}
+
+.vip {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.vip__inter,.vip__code {
+    display: block;
+    font-size: 1.2rem;
+    padding: 5px 12px;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+
+.vip__inter {
+    background-color: #f8e71c;
+}
+
+.vip__code {
+    color: var(--white-color);
+    background-color: #ffffff1a;
+}
+
+.vip__more {
+    background-color: #ffffff1a;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    color: var(--white-color);
+    padding: 8px 9px;
+    height: 3rem;
+    line-height: 1.5rem;
+}
+
+.container__body-selection-bar {
+    display: flex;
+}
+
+.selection-bar__list {
+    margin: 0 auto;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #4b206e;
+    border-radius: 20px;
+}
+
+.selection-bar__item {
+    color:var(--white-color);
+    font-size: 1.4rem;
+    padding: 5px 25px;
+    font-weight: 200;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.selection-bar__item.active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.container__body-main {
+    margin-top: 40px;
+    padding: 0 60px;
+}
+
+.text-head {
+    color: var(--white-color);
+    font-size: 2.6rem;
+    padding-bottom: 10px;
+}
+
+.slide {
+    border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: 40px;
+}   
+
+.slide__img {
+    width: 80%;
+    border-radius: 5px;
+    display: block;
+}
+
+.play-list-head {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.play-list-head__dow,
+.play-list-head__play {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    padding: 8px 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.play-list-head__dow {
+    background-color: #4b206e;
+}
+
+.play-list-head__play {
+    background-color: #ed2b91;
+}
+
+.play-list-head__dow i,
+.play-list-head__play i {
+    margin-right: 5px;
+}
+
+.play-list {
+    height: 232px;
+    overflow-y: scroll;
+
+}
+
+
+.play-list__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ffffff1a;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.play-list__item:hover {
+    background-color: #ffffff1a;
+}
+
+.play-list__item.active {
+    background-color: #ffffff1a;
+}
+
+.play-list__item-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.play-list__item-img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.play-list__item-wrapper {
+    
+}
+
+
+.play-list__item-info-name,
+.play-list__item-name {
+    color: var(--white-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.play-list__item-info-author,
+.play-list__item-author {
+    display: block;
+    color: rgb(255 255 255 / 50%);
+    font-size: 1.4rem;
+    padding-top: 5px;
+}
+
+.play-list__item-totalTime {
+    color: rgb(255 255 255 / 50%);
+    font-size: 1.4rem;
+    flex: 1;
+}
+
+.play-list__item-setting {
+    
+}
+
+.play-list__item-setting-micro,
+.play-list__item-setting-dot,
+.play-list__item-setting-heart {
+    color: var(--white-color);
+    font-size: 1.4rem;
+    padding: 0 10px;
+    cursor:pointer;
+}
+
+.player {
+    position: fixed;
+    z-index: 10;
+    padding: 50px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url('https://vikdang.github.io/Code_web_music_player/assets/img/themeBgs/listTheme1/playerThemes/theme1.png');
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.player__info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+
+.player__info-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.player__play-icon {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.player__info-heart,.player__info-dot {
+    /* display: block; */
+    font-size: 1.4rem;
+    color: var(--white-color);
+    padding: 20px;
+}
+
+.player__info-heart i{
+    color: #ed2b91;
+}
+
+.player__info-dot i {
+    color: var(--white-color);
+}
+
+
+
+
+.player__play-repeat,
+.player__play-play,
+.player__play-next,
+.player__play-repeat {
+    display: block;
+}
+
+.player__play-repeat {
+    color: var(--white-color);
+    font-size: 2rem;
+    padding: 20px;
+    cursor:pointer;
+
+}
+
+.player__play-play .pause {
+    display: none;
+}
+
+.player__play-play.run .pause {
+    display: inline-block;
+}
+
+.player__play-play.run .play {
+    display: none;
+}
+
+.player__play-play .pause, .player__play-play .play{
+    color: var(--white-color);
+    font-size: 2rem;
+    padding: 20px;
+    cursor:pointer;
+}
+.player__play-random,
+.player__play-prev {
+    color: var(--white-color);
+    font-size: 2rem;
+    padding: 20px;
+    cursor:pointer;
+
+}
+
+.player__play-random.random {
+    color: #ed2b91;
+}
+
+.player__play-repeat.repeat {
+    color: #ed2b91;
+}
+
+
+.player__play-next {
+    color: var(--white-color);
+    font-size: 2rem;
+    padding: 20px;
+    cursor:pointer;
+
+}
+
+.player__play-repeat {
+    color: var(--white-color);
+    font-size: 2rem;
+    padding: 20px;
+    cursor:pointer;
+
+}
+
+.player__play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding: 0 50px;
+}
+
+
+
+.player__setting {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.player__setting-video {
+    color: var(--white-color);
+    padding: 20px;
+    font-size: 1.4rem;
+}
+.player__setting-micro {
+    color: var(--white-color);
+    padding: 20px;
+    font-size: 1.4rem;
+}
+.player__setting-volume {
+    color: var(--white-color);
+    padding: 10px 6px 10px;
+    font-size: 1.4rem;
+}
+.player__setting-range {
+
+}
+.player__play-input {
+    width: 100%;
+    cursor: pointer;
+}
+
+.album {
+}
+
+.album-wrap-image {
+    overflow: hidden;
+    border-radius: 5px;
+}
+.album-img {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    transition: all linear 0.3s;
+}
+
+.album-img:hover {
+    transform: scale(1.2);
+}
+
+.album-name {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--white-color);
+    padding: 10px 0;
+}
+
+.artist {
+
+}
+
+.artist-wrap-image {
+    border-radius: 50%;
+    overflow: hidden;
+   
+}
+
+.artist-img {
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+    transition: all linear 0.3s;
+}
+
+.artist-img:hover {
+    transform: scale(1.2);
+}
+
+.artist__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artist__info-name {
+    font-size: 1.8rem;
+    color: var(--white-color);
+    padding: 10px 10px 5px 10px;
+}
+
+.artist__info-name i{
+    font-size: 1rem;
+    transform: translateY(-2px);
+}
+
+.artist__info-follow {
+    font-size: 1.3rem;
+    color: rgb(255 255 255 / 50%);
+}
+
+.artist-care {
+    margin-top: 8px;
+    padding:5px 18px;
+    background-color: #ed2b91;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+/* discover */
+.discover__slider-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.discover {
+    margin-top: var(--container-head);
+    margin-left: var(--navbar-width);
+}
+
+
+.discover__body {
+    margin-top: 60px;
+    padding-bottom: 150px;
+}
+
+.discover__body-head {
+    font-size: 2.4rem;
+    color: var(--white-color);
+    margin-bottom: 10px;
+}
+
+.discover__body-item {
+
+}
+
+.discover__body-item-wrap {
+    overflow: hidden;
+}
+
+.discover__body-item-img {
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all linear 0.3s;
+}
+.discover__body-item-img:hover {
+    transform: scale(1.2);
+}
+.discover__body-item-name {
+    display: block;
+    font-size: 1.6rem;
+    color: var(--white-color);
+    padding: 5px 0;
+    font-weight: 500;
+    line-height: 1.8rem;
+    height: 24px;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.discover__body-item-name:hover {
+    cursor: pointer;
+    color: #ed2b91;
+}
+
+.discover__body-item-description {
+    display: block;
+    font-size: 1.6rem;
+    color: rgb(255 255 255 / 50%);
+    line-height: 1.8rem;
+    height: 36px;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.zing-chart {
+    margin-top: var(--container-head);
+    margin-left: var(--navbar-width);
+}
+
+.modal {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://vikdang.github.io/Code_web_music_player/assets/img/themeBgs/listTheme1/theme1.svg')top center;
+    transform: translateY(100%);
+   
+}
+
+.modal__dow {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 20px;
+}
+
+.popup__action-btn-icon {
+    
+    margin: auto;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: var(--white-color);
+}
+
+.modal__body {
+   text-align: center;
+}
+
+.modal__body-wrap {
+
+}
+
+.modal__body-img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.modal__des {
+
+}
+
+.modal__des-state {
+    display: block;
+    color: rgb(255 255 255 / 50%);
+    margin: 10px 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.modal__des-name {
+    color: var(--white-color);
+    font-size: 2.2rem;
+    padding-bottom: 10px;
+}
+.modal__des-singer {
+    color: rgb(255 255 255 / 50%);
+    font-size: 1.6rem;
+    font-weight: 500;
+
+}
+
+.modal.show {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
